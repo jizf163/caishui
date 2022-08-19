@@ -2,29 +2,32 @@
 layout: default_style
 ---
 
-<div class="yewu ou">
+{% for yw in site.data.yewu %}
+<div class="yewu ou{{yw.cat.id | modulo:2}}">
     <div class="container">
-    {% for yw in site.data.yewu %}
-    <div class="row">
-        <div class="col-md-3"><h3>{{ yw.cat.name }}</h3></div>
-        <div class="col-md-9">
-            {% for x in yw.cat.list %}
-          
-            <div class="col-md-3">
-                <div class="thumbnail det">
-                    <div class="title"><h3>{{ x.name}}</h3></div>
-                    <div class="caption">
-                        <p>{{x.des}}</p>
-                    </div>
-                    <div class="price">¥{{x.price}}</div>
-                </div>
-                
-            </div>
-            {% endfor %}
-        </div>
         
-        <br>
-    </div>
-    {% endfor %}
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-12"><h3>{{ yw.cat.name }}</h3><p>{{yw.cat.des}}</p></div>
+            <div class="col-md-9 col-sm-8 col-xs-12">
+                {% for x in yw.cat.list %}
+            
+                <div class="col-md-4 col-sm-6  col-xs-12">
+                    <div class="thumbnail det">
+                        <div class="title"><h4>{{ x.name}}</h4></div>
+                        <div class="yewuneirong">
+                            <div class="des">{{x.des}}</div>
+                            <div class="price">¥<span class="im">{{x.price}}</span><span class="pt">元起</span></div>
+                        </div>
+                       
+                    </div>
+                    
+                </div>
+                {% endfor %}
+            </div>
+            
+            <br>
+        </div>
+    
     </div>
 </div>
+{% endfor %}
