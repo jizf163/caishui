@@ -1,3 +1,30 @@
 ---
-layout: home_style
+layout: default_style
 ---
+
+<div class="yewu ou">
+    <div class="container">
+    {% for yw in site.data.yewu %}
+    <div class="row">
+        <div class="col-md-3"><h3>{{ yw.cat.name }}</h3></div>
+        <div class="col-md-9">
+            {% for x in yw.cat.list %}
+          
+            <div class="col-md-3">
+                <div class="thumbnail det">
+                    <div class="title"><h3>{{ x.name}}</h3></div>
+                    <div class="caption">
+                        <p>{{x.des}}</p>
+                    </div>
+                    <div class="price">¥{{x.price}}</div>
+                </div>
+                
+            </div>
+            {% endfor %}
+        </div>
+        
+        <br>
+    </div>
+    {% endfor %}
+    </div>
+</div>
