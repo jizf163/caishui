@@ -13,36 +13,7 @@
              label_warning: 冲抵记账费用
              label_danger: 
             price: "800.00" 
-          - name: 公司注销
-            des: 不需法人到场，签订代理合同，无隐形收费，各种企业注销简易流程
-            tag: 
-             label_default: 官网公布
-             label_primary: 
-             label_success: 无后顾之忧
-             label_info: 
-             label_warning: 销户
-             label_danger: 
-            price: "1600.00"
-          - name: 工商变更
-            des: 一站式企业服务，无任何隐形收费，极简办理流程
-            tag: 
-             label_default: 
-             label_primary: 无忧
-             label_success: 1天
-             label_info: 
-             label_warning: 进度随时公布
-             label_danger: 
-            price: "50.00"
-          - name: 社保开户
-            des: 解决企业交社保难题，一对一客服，售后有保障
-            tag: 
-             label_default: 快速 
-             label_primary: 无忧
-             label_success: 3天
-             label_info: 
-             label_warning: 进度随时公布
-             label_danger: 
-            price: "200.00"
+
           - name: 公司核名
             des: 工商核名，根据工商核名规则，秒出结果。
             tag: 
@@ -63,6 +34,36 @@
              label_warning: 公安备案
              label_danger: 
             price: "200.00"
+          - name: 工商变更
+            des: 一站式企业服务，无任何隐形收费，极简办理流程
+            tag: 
+             label_default: 
+             label_primary: 无忧
+             label_success: 1天
+             label_info: 
+             label_warning: 进度随时公布
+             label_danger: 
+            price: "50.00"
+          - name: 社保开户
+            des: 解决企业交社保难题，一对一客服，售后有保障
+            tag: 
+             label_default: 快速 
+             label_primary: 无忧
+             label_success: 3天
+             label_info: 
+             label_warning: 进度随时公布
+             label_danger: 
+            price: "200.00"
+          - name: 公司注销/转让
+            des: 不需法人到场，签订代理合同，无隐形收费，各种企业注销简易流程
+            tag: 
+             label_default: 官网公布
+             label_primary: 
+             label_success: 无后顾之忧
+             label_info: 
+             label_warning: 销户
+             label_danger: 
+            price: "1600.00"
           
 - cat: 
      id: 2
@@ -70,98 +71,98 @@
      des: 代理记账、价格合理、服务覆盖邯郸市各区县
      list:
           - name: 汇算清缴
-            des: 简介
+            des: 采取分月、分季预缴税款，年终汇算清缴税款，已交税款多退少补。
             tag: 
-             label_default: "快速" 
-             label_primary: 无忧
-             label_success: 3天
+             label_default: APP办理 
+             label_primary: 代办
+             label_success: 无需提供资料
              label_info: 
-             label_warning: 进度随时公布
+             label_warning: 
              label_danger: 
             price: "100.00"
           - name: 账簿凭证
-            des: 简介
+            des: 根据汇总或原始凭证，按照经济业务归类，记录、审核记账凭证。 
             tag: 
-             label_default: "快速" 
-             label_primary: 无忧
-             label_success: 3天
+             label_default: 快速 
+             label_primary: 
+             label_success: 无误
              label_info: 
-             label_warning: 进度随时公布
+             label_warning: 
              label_danger: 
             price: "1500.00"
           - name: 税务申报
-            des: 简介
+            des: 在税法规定的申报期内，向主管税务机关进行年度纳税申报和缴纳应补缴的税款，或申请办理抵（退）税手续。
             tag: 
-             label_default: "快速" 
+             label_default: 准确 
              label_primary: 无忧
-             label_success: 3天
+             label_success: 
              label_info: 
-             label_warning: 进度随时公布
+             label_warning: 无遗漏
              label_danger: 
             price: "100.00"
           - name: 发票代开
-            des: 简介
+            des: 电子税务局代开普通增值税发票和专票。
             tag: 
-             label_default: "快速" 
-             label_primary: 无忧
-             label_success: 3天
+             label_default: 普通
+             label_primary: 专票
+             label_success: 1天
              label_info: 
-             label_warning: 进度随时公布
+             label_warning: 快递
              label_danger: 
             price: "100.00"
           - name: 财税风险预警
-            des: 简介
+            des: 财税大数据分析，风险推送预警。
             tag: 
-             label_default: "快速" 
-             label_primary: 无忧
-             label_success: 3天
+             label_default: 风险可控
+             label_primary: 推送
+             label_success: 实时
              label_info: 
-             label_warning: 进度随时公布
+             label_warning: 大屏
              label_danger: 
             price: "5000.00"
           - name: 财税规划
-            des: 简介
+            des: 合理筹划方案，降低税额，增加费用，不可抵扣转可抵扣。
             tag: 
-             label_default: "快速" 
-             label_primary: 无忧
-             label_success: 3天
+             label_default: 筹划 
+             label_primary: 专业团队
+             label_success: 效果明显
              label_info: 
-             label_warning: 进度随时公布
+             label_warning: 
              label_danger: 
             price: "5000.00"
 - cat:
      id: 3 
      name: 知识产权
-     des: 免费查询、快速办理、一站式服务
+     des: 先行业推出商标担保注册“不成功退全款“服务，依托强大的大数据，建立风险控制体系，切实保障客户的权益。免费查询、快速办理、一站式服务。
      list:
-          - name: 商标注册
-            des: 快速注册，费用地，拒绝隐形消费，一对一专属服务
+          - name: 商标服务
+            des: 商标注册、转让、续展、变更、注销、更正、许可备案、宽展等
             tag: 
-             label_default: "快速" 
-             label_primary: 无忧
-             label_success: 3天
+             label_default: 专业团队 
+             label_primary: 秒出结果
+             label_success: 担保注册
              label_info: 
-             label_warning: 进度随时公布
+             label_warning: 
              label_danger: 
             price: "800.00"
-          - name: 专利申请
-            des: 不需法人到场，签订代理合同，无隐形收费，各种企业注销简易流程
+          - name: 专利服务
+            des: 发明专利申请、实用新型申请、外观设计申请、专利官方检索、专利撰写、著录项目变更、审查意见答复、权利恢复、许可备案、专利权评价报告等；
             tag: 
-             label_default: "快速" 
-             label_primary: 无忧
-             label_success: 3天
+             label_default: 快速
+             label_primary: 官方
+             label_success: 
              label_info: 
-             label_warning: 进度随时公布
+             label_warning: 专业团队
              label_danger: 
             price: "1200.00"
           - name: 高新办理
-            des: 一站式企业服务，无任何隐形收费，极简办理流程
+            des: 知识产权贯标、国内高新技术企业认定、政策咨询等；
             tag: 
-             label_default: "快速" 
-             label_primary: 无忧
-             label_success: 3天
+             label_default: 官方
+             label_primary: 专业团队
+             label_success: 补贴
              label_info: 
-             label_warning: 进度随时公布
+             label_warning: 
              label_danger: 
             price: "6000.00"
 - cat:
@@ -189,7 +190,16 @@
              label_warning: 冲抵记账费用
              label_danger: 
             price: "0.00" 
-          
+          - name: 防伪刻章
+            des: 正规渠道，公安备案，防伪章，公章、合同章、法人章。
+            tag: 
+             label_default: 权威
+             label_primary: 
+             label_success: 真实
+             label_info: 
+             label_warning: 公安备案
+             label_danger: 
+            price: "200.00"
           - name: 代理记账
             des: 一站式企业服务，无任何隐形收费，极简办理流程
             tag: 
