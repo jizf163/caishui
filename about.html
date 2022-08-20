@@ -9,45 +9,42 @@ permalink: /about
   <img src="assets/img/slider/slide9.jpg" class="blog-post" alt="Feature-img" align="right" width="100%"> 
 </div>
 
-<div id="banners"></div>
-<div class="container">   
+<div class="container" style="margin-top:20px">   
   <div class="row">
     <div class="side-left col-sm-4 col-md-4">
       <h3 class="lead">  我们的团队 : </h3><hr>
 
-      <p>大品财税是服务于邯郸市以及各区县的专业的财税组织，2016年成立以来，经营范围由单纯的代理记账，宽展到公司注册、代理记账、税务办理、资质申请、商标、专利、高新企业办理等范围，为了更好的服务邯郸本地，各区县也有连锁机构。</p>
-      <a href="#anchor1"> 发展进程</a><br>
-      <a href="#anchor2"> 信念</a><br>
-      <a href="#anchor3"> 材料</a><br>
+      <p style="line-height:25px ;">大品财税是服务于邯郸市以及各区县的专业的财税组织，2016年成立以来，经营范围由单纯的代理记账，宽展到公司注册、代理记账、税务办理、资质申请、商标、专利、高新企业办理等范围，为了更好的服务邯郸本地，各区县也有连锁机构。</p>
+      <a href="#anchor2"> 业务板块</a><br>
+      <a href="#anchor3"> 企业文化</a><br>
       <br>
-      <h4>2002 - LOREM IPSUM DOLOR :</h4><hr>
+      <hr>
     </div>
     <div class="col-sm-8 col-md-8">
-        <h3 class="lead"id="anchor1"> 大品财税发展历程 </h3><hr>
+        <h3 class="lead"> 关于我们 </h3><hr>
         <p>
-          Curabitur vulputate, ligula lacinia scelrisque tempor, lacus lacus ornare ante, ac egeistas est urna sit amet arcu. Class aptent taeraciti sociosqu ad litora torquent. Hibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a dolor sit amet lipsum enim in.
+            网站运营主体为邯郸市大品电子科技有限公司，产品服务提供方为旗下大品财税。
         </p>
+        
+        <h4 id="anchor2">业务板块</h4>
+        <div style="line-height: 25px;">
+            {% for yw in site.data.yewu %}
+                <div>{{yw.cat.name}}</div>
+                {%for i in yw.cat.list%}
+                    <div style="padding-left: 20px;">{{i.name}}:{{i.des}}</div>
+                {%endfor%}
+            {%endfor%}
+        </div>
 
-        <h4>2002年 - LOREM IPSUM DOLOR</h4>
-        <p></p>
+       
 
-        <h4>2007年 - VIVAMUS HENDERIT</h4>
-        <p></p>
-        <h4>2008年 - PRAESENT ID METUS</h4>
-        <p>
-        </p>
-        <h3 class="lead"id="anchor2">我们的信念:</h3>
-        <p>
-          <br>
-        </p>
-
-        <h3 class="lead"id="anchor3">In the Press:</h3>
+        <h4 id="anchor3">企业文化</h4>
         <blockquote>
-          <em>Donec congue lacinia dui, a porttitor lectus condimentum oreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus e vestibulum faucibus et in metus. In pellentesque faucibus vestibulum. Nulla nulla justo, eget luctus tortor dolor sit amet lipsum odio lectus congue.</em>
+          <em>品牌定位：为用户提供专业化、一站式的财税服务<br>
+            组织愿景：成为邯郸地区专业化的财税组织<br>
+            组织使命：为每一次创新保驾护航，助力中国创造<br>
+            价值观：客户第一，使命必达，简单真诚，成人达己，拥抱变化</em>
         </blockquote>
-        <p class="block-author"> MARCIA HERNANDEZ, CLIENT</p>
-        <br><br>
-        <p>Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc.</p></p>
     </div>  
   </div>    
 </div>  
