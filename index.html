@@ -2,12 +2,15 @@
 layout: default_style
 ---
 
+<div class="container-fluid" style="padding:0;">
+    <img src="assets/img/slider/slide9.jpg" class="blog-post" alt="Feature-img" align="right" width="100%"> 
+</div>
 {% for yw in site.data.yewu %}
 <div class="yewu ou{{yw.cat.id | modulo:2}}">
     <div class="container">
         
         <div class="row">
-            <div class="col-md-3 col-sm-4 col-xs-12"><h3>{{ yw.cat.name }}</h3><p>{{yw.cat.des}}</p></div>
+            <div class="col-md-3 col-sm-4 col-xs-12"><h3>{{ yw.cat.name }}</h3><p style="line-height: 30px;">{{yw.cat.des}}</p></div>
             <div class="col-md-9 col-sm-8 col-xs-12">
                 {% for x in yw.cat.list %}
             
@@ -16,6 +19,32 @@ layout: default_style
                         <div class="title"><h4>{{ x.name}}</h4></div>
                         <div class="yewuneirong">
                             <div class="des">{{x.des}}</div>
+                            <div class="tagd">
+                               
+                                {% if x.tag.label_default %}
+                                  <span class="label label-default">{{ x.tag.label_default }}</span> 
+                                {% endif %}
+                        
+                                {% if x.tag.label_primary %}
+                                  <span class="label label-primary">{{ x.tag.label_primary }}</span> 
+                                {% endif %}
+                                
+                                {% if x.tag.label_success %}
+                                  <span class="label label-success">{{ x.tag.label_success }}</span> 
+                                {% endif %}
+                                
+                                {% if x.tag.label_info %}
+                                  <span class="label label-info">{{ x.tag.label_info }}</span> 
+                                {% endif %}
+                                
+                                {% if x.tag.label_warning %}
+                                  <span class="label label-warning">{{ x.tag.label_warning }}</span>
+                                {% endif %}
+                        
+                                {% if x.tag.label_danger %}
+                                  <span class="label label-danger">{{ x.tag.label_danger }}</span>
+                                {% endif %}
+                              </div>         
                             <div class="price">¥<span class="im">{{x.price}}</span><span class="pt">元起</span></div>
                         </div>
                        
@@ -31,3 +60,110 @@ layout: default_style
     </div>
 </div>
 {% endfor %}
+
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=f7903u8G9QyG5sV4pACxvZBy3nNenxMg">
+</script>
+<div class="container-fluid" style="padding: 0 ;">
+    <div id="mapCanvas" class="map-canvas no-margin" style="height: 450px;">
+        
+        <script type="text/javascript">
+            var map   = new BMap.Map("mapCanvas"); // 创建Map实例
+            var point_center =new BMap.Point("114.51325","36.592929"); // 创建点坐标
+            var point = new BMap.Point("114.517176", "36.631281"); // 创建点坐标
+            var point2 = new BMap.Point("114.503225","36.571165"); // 创建点坐标
+            var point3 = new BMap.Point("114.485115","36.591683"); // 创建点坐标
+            var point_ca = new BMap.Point("114.677532","36.449652"); // 创建点坐标114.677532,36.449652
+            var point_lz = new BMap.Point("114.593285","36.334154"); // 创建点坐标114.677532,36.449652
+            var point_fx = new BMap.Point("114.797955","36.559671"); // 创建点坐标114.677532,36.449652
+            var point_wx = new BMap.Point("114.942834","36.369733"); // 创建点坐标114.677532,36.449652
+            var point_mt = new BMap.Point("114.472984","36.493316"); // 创建点坐标114.677532,36.449652
+            var point_wa = new BMap.Point("114.218727","36.699965"); // 创建点坐标114.677532,36.449652
+            var point_ff = new BMap.Point("114.226704","36.426322"); // 创建点坐标114.677532,36.449652
+            var point_cx = new BMap.Point("114.385597","36.379148"); // 创建点坐标114.677532,36.449652
+            var point_yn = new BMap.Point("114.54377","36.748041"); // 创建点坐标114.677532,36.449652
+            map.centerAndZoom(point_center, 11); // 初始化地图,设置中心点坐标和地图级别。
+            var marker = new BMap.Marker(point); // 创建标注
+            var marker2 = new BMap.Marker(point2); // 创建标注
+            var marker3 = new BMap.Marker(point3); // 创建标注
+            var marker_ca = new BMap.Marker(point_ca); // 创建标注
+            var marker_lz = new BMap.Marker(point_lz); // 创建标注
+            var marker_fx = new BMap.Marker(point_fx); // 创建标注
+            var marker_wx = new BMap.Marker(point_wx); // 创建标注
+            var marker_mt = new BMap.Marker(point_mt); // 创建标注
+            var marker_wa = new BMap.Marker(point_wa); // 创建标注
+            var marker_ff = new BMap.Marker(point_ff); // 创建标注
+            var marker_cx = new BMap.Marker(point_cx); // 创建标注
+            var marker_yn = new BMap.Marker(point_yn); // 创建标注
+            map.addOverlay(marker); // 将标注添加到地图中
+            map.addOverlay(marker2); // 将标注添加到地图中
+            map.addOverlay(marker3); // 将标注添加到地图中
+            map.addOverlay(marker_ca); // 将标注添加到地图中
+            map.addOverlay(marker_lz); // 将标注添加到地图中
+            map.addOverlay(marker_fx); // 将标注添加到地图中
+            map.addOverlay(marker_wx); // 将标注添加到地图中
+            map.addOverlay(marker_mt); // 将标注添加到地图中
+            map.addOverlay(marker_wa); // 将标注添加到地图中
+            map.addOverlay(marker_ff); // 将标注添加到地图中
+            map.addOverlay(marker_cx); // 将标注添加到地图中
+            map.addOverlay(marker_yn); // 将标注添加到地图中
+            var infoWindow = new BMap.InfoWindow("大品财税（总部）<br>1861758898"); // 创建信息窗口对象
+            var infoWindow2 = new BMap.InfoWindow("大品财税（美的时代城分部）<br>1861758898"); // 创建信息窗口对象
+            var infoWindow3 = new BMap.InfoWindow("大品财税（赵都新城分部）<br>1861758898"); // 创建信息窗口对象
+            var infoWindow_ca = new BMap.InfoWindow("大品财税（成安分部）<br>1861758898"); // 创建信息窗口对象
+            var infoWindow_lz = new BMap.InfoWindow("大品财税（临漳分部）<br>1861758898"); // 创建信息窗口对象
+            var infoWindow_fx = new BMap.InfoWindow("大品财税（肥乡分部）<br>1861758898"); // 创建信息窗口对象
+            var infoWindow_wx = new BMap.InfoWindow("大品财税（魏县分部）<br>1861758898"); // 创建信息窗口对象
+            var infoWindow_mt = new BMap.InfoWindow("大品财税（马头分部）<br>1861758898"); // 创建信息窗口对象
+            var infoWindow_wa = new BMap.InfoWindow("大品财税（武安分部）<br>1861758898"); // 创建信息窗口对象
+            var infoWindow_ff = new BMap.InfoWindow("大品财税（峰峰分部）<br>1861758898"); // 创建信息窗口对象
+            var infoWindow_cx = new BMap.InfoWindow("大品财税（磁县分部）<br>1861758898"); // 创建信息窗口对象
+            var infoWindow_yn = new BMap.InfoWindow("大品财税（永年分部）<br>1861758898"); // 创建信息窗口对象
+            marker.openInfoWindow(infoWindow);
+
+            marker.addEventListener("click", function(){          
+                marker.openInfoWindow(infoWindow); //开启信息窗口
+	        }); 
+            marker2.addEventListener("click", function(){          
+                marker2.openInfoWindow(infoWindow2); //开启信息窗口
+	        }); 
+            marker3.addEventListener("click", function(){          
+                marker3.openInfoWindow(infoWindow3); //开启信息窗口
+	        }); 
+            marker_ca.addEventListener("click", function(){          
+                marker_ca.openInfoWindow(infoWindow_ca); //开启信息窗口
+	        }); 
+            marker_lz.addEventListener("click", function(){          
+                marker_lz.openInfoWindow(infoWindow_lz); //开启信息窗口
+	        }); 
+            marker_fx.addEventListener("click", function(){          
+                marker_fx.openInfoWindow(infoWindow_fx); //开启信息窗口
+	        }); 
+            marker_wx.addEventListener("click", function(){          
+                marker_wx.openInfoWindow(infoWindow_wx); //开启信息窗口
+	        }); 
+            marker_mt.addEventListener("click", function(){          
+                marker_mt.openInfoWindow(infoWindow_mt); //开启信息窗口
+	        }); 
+            marker_wa.addEventListener("click", function(){          
+                marker_wa.openInfoWindow(infoWindow_wa); //开启信息窗口
+	        }); 
+            marker_ff.addEventListener("click", function(){          
+                marker_ff.openInfoWindow(infoWindow_ff); //开启信息窗口
+	        }); 
+            marker_cx.addEventListener("click", function(){          
+                marker_cx.openInfoWindow(infoWindow_cx); //开启信息窗口
+	        }); 
+            marker_yn.addEventListener("click", function(){          
+                marker_yn.openInfoWindow(infoWindow_yn); //开启信息窗口
+	        }); 
+
+            //map.enableScrollWheelZoom(); //启用滚轮放大缩小
+            //添加缩放控件
+            map.addControl(new BMap.NavigationControl());
+            map.addControl(new BMap.ScaleControl());
+            map.addControl(new BMap.OverviewMapControl());
+
+            
+        </script>
+    </div>
+</div>

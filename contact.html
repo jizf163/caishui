@@ -4,16 +4,60 @@ permalink: /contact
 published: true
 ---
 <!-- Main Container -->
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=f7903u8G9QyG5sV4pACxvZBy3nNenxMg">
+</script>
+<div class="container-fluid" style="padding: 0 ;">
+    <div id="mapCanvas" class="map-canvas no-margin" style="height: 500px;">
+        
+        <script type="text/javascript">
+            var map   = new BMap.Map("mapCanvas"); // 创建Map实例
+            var point_center =new BMap.Point("114.51325","36.592929"); // 创建点坐标
+            var point = new BMap.Point("114.517176", "36.631281"); // 创建点坐标
+            var point2 = new BMap.Point("114.503225","36.571165"); // 创建点坐标
+            var point3 = new BMap.Point("114.485115","36.591683"); // 创建点坐标
 
-<div class="container-fluid-kamn">
-  <div class="row">
-    <div>
-      <iframe width="100%" height="450px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{{ site.google_map }}"></iframe>
-      <br />
+            map.centerAndZoom(point_center, 13); // 初始化地图,设置中心点坐标和地图级别。
+            var marker = new BMap.Marker(point); // 创建标注
+            var marker2 = new BMap.Marker(point2); // 创建标注
+            var marker3 = new BMap.Marker(point3); // 创建标注
+            map.addOverlay(marker); // 将标注添加到地图中
+            map.addOverlay(marker2); // 将标注添加到地图中
+            map.addOverlay(marker3); // 将标注添加到地图中
+            var infoWindow = new BMap.InfoWindow("大品财税（总部）<br>1861758898"); // 创建信息窗口对象
+            marker.openInfoWindow(infoWindow);
+            var infoWindow2 = new BMap.InfoWindow("大品财税（美的时代城分部）<br>1861758898"); // 创建信息窗口对象
+            marker2.openInfoWindow(infoWindow2);
+            var infoWindow3 = new BMap.InfoWindow("大品财税（赵都新城分部）<br>1861758898"); // 创建信息窗口对象
+            marker3.openInfoWindow(infoWindow3);
+
+
+            marker.addEventListener("click", function(){          
+                marker.openInfoWindow(infoWindow); //开启信息窗口
+	        }); 
+            marker2.addEventListener("click", function(){          
+                marker2.openInfoWindow(infoWindow2); //开启信息窗口
+	        }); 
+            marker3.addEventListener("click", function(){          
+                marker3.openInfoWindow(infoWindow3); //开启信息窗口
+	        }); 
+
+            map.enableScrollWheelZoom(); //启用滚轮放大缩小
+            //添加缩放控件
+            map.addControl(new BMap.NavigationControl());
+            map.addControl(new BMap.ScaleControl());
+            map.addControl(new BMap.OverviewMapControl());
+
+            
+        </script>
     </div>
+</div>
+
+<div class="container-fluid" style="margin-top: 20px">
+  <div class="row">
+    
     <div class="container">
       <div class="col-lg-4">
-        <h4>Find us at:</h4>
+        <h4>联系我们:</h4>
 
         <p class="block-author">{{ site.company_name }}</p>
         <p>{{ site.address_line }}</p>
@@ -45,18 +89,18 @@ published: true
           <form action="http://templates.designorbital.com/baleen/contact.php" method="post" id="contact-form">
             <fieldset>
               <div class="form-group form-group-fullname">
-                <label class="control-label" for="fullname">NAME *</label>
+                <label class="control-label" for="fullname">姓名 *</label>
                 <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Enter Your Name">
               </div>
               <div class="form-group form-group-email">
-                <label class="control-label" for="email">E-MAIL *</label>
+                <label class="control-label" for="email">电话/邮件 *</label>
                 <input type="text" class="form-control" name="email" id="email" placeholder="Enter Your E-Mail">
               </div>
               <div class="form-group form-group-message">
-                <label class="control-label" for="message">MESSAGE *</label>
+                <label class="control-label" for="message">信息 *</label>
                 <textarea class="form-control" name="message" id="message" rows="3"></textarea>
               </div>           
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">发送</button>
             </fieldset>
           </form>
           
