@@ -1,0 +1,26 @@
+<div class="tagd">
+                               
+    {% if item.tag.label_default %}
+      <span class="label label-default">{{ item.tag.label_default }}</span> 
+    {% endif %}
+
+    {% if item.tag.label_primary %}
+      <span class="label label-primary">{{ item.tag.label_primary }}</span> 
+    {% endif %}
+    
+    {% if item.tag.label_success %}
+      <span class="label label-success">{{ item.tag.label_success }}</span> 
+    {% endif %}
+    
+    {% if item.tag.label_info %}
+      <span class="label label-info">{{ item.tag.label_info }}</span> 
+    {% endif %}
+    
+    {% if item.tag.label_warning %}
+      <span class="label label-warning">{{ item.tag.label_warning }}</span>
+    {% endif %}
+
+    {% if item.tag.label_danger %}
+      <span class="label label-danger">{{ item.tag.label_danger }}</span>
+    {% endif %}
+</div>         

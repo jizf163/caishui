@@ -5,53 +5,15 @@ layout: default_style
 <div class="container-fluid" style="padding:0;">
     <img src="assets/img/slider/slide9.jpg" class="blog-post" alt="Feature-img" align="right" width="100%"> 
 </div>
-{% for yw in site.data.yewu %}
-<div class="yewu ou{{yw.cat.id | modulo:2}}">
+<div class="yewu ou1">
     <div class="container">
-        
         <div class="row">
-            <div class="col-md-3 col-sm-4 col-xs-12"><h3>{{ yw.cat.name }}</h3><p style="line-height: 30px;">{{yw.cat.des}}</p></div>
+            <div class="col-md-3 col-sm-4 col-xs-12"><h3>{{site.collections[1].name}}</h3><p style="line-height: 30px;">
+                {{site.collections[1].des}}</p></div>
             <div class="col-md-9 col-sm-8 col-xs-12">
-                {% for x in yw.cat.list %}
-            
-                <div class="col-md-4 col-sm-6  col-xs-12">
-                    <div class="thumbnail det">
-                        <div class="title"><h4>{{ x.name}}</h4></div>
-                        <div class="yewuneirong">
-                            <div class="des">{{x.des}}</div>
-                            <div class="tagd">
-                               
-                                {% if x.tag.label_default %}
-                                  <span class="label label-default">{{ x.tag.label_default }}</span> 
-                                {% endif %}
-                        
-                                {% if x.tag.label_primary %}
-                                  <span class="label label-primary">{{ x.tag.label_primary }}</span> 
-                                {% endif %}
-                                
-                                {% if x.tag.label_success %}
-                                  <span class="label label-success">{{ x.tag.label_success }}</span> 
-                                {% endif %}
-                                
-                                {% if x.tag.label_info %}
-                                  <span class="label label-info">{{ x.tag.label_info }}</span> 
-                                {% endif %}
-                                
-                                {% if x.tag.label_warning %}
-                                  <span class="label label-warning">{{ x.tag.label_warning }}</span>
-                                {% endif %}
-                        
-                                {% if x.tag.label_danger %}
-                                  <span class="label label-danger">{{ x.tag.label_danger }}</span>
-                                {% endif %}
-                              </div>         
-                            <div class="price">¥<span class="im">{{x.price}}</span><span class="pt">元起</span></div>
-                        </div>
-                       
-                    </div>
-                    
-                </div>
-                {% endfor %}
+                {% for item in site.gongshang%}
+                {% include module.html %}
+                {%endfor%}
             </div>
             
             <br>
@@ -59,7 +21,53 @@ layout: default_style
     
     </div>
 </div>
-{% endfor %}
+<div class="yewu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-12"><h3>{{ site.collections[3].name }}</h3><p style="line-height: 30px;">{{site.collections[3].des}}</p></div>
+            <div class="col-md-9 col-sm-8 col-xs-12">
+                {% for item in site.shuiwu%}
+                {% include module.html %}
+                {%endfor%}
+            </div>
+            
+            <br>
+        </div>
+    
+    </div>
+</div>
+<div class="yewu ou1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-12"><h3>{{site.collections[4].name}}</h3><p style="line-height: 30px;">
+                {{site.collections[4].des}}</p></div>
+            <div class="col-md-9 col-sm-8 col-xs-12">
+                {% for item in site.zhishi%}
+                {% include module.html %}
+                {%endfor%}
+            </div>
+            
+            <br>
+        </div>
+    
+    </div>
+</div>
+<div class="yewu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-12"><h3>{{ site.collections[0].name }}</h3><p style="line-height: 30px;">{{site.collections[0].des}}</p></div>
+            <div class="col-md-9 col-sm-8 col-xs-12">
+                {% for item in site.chuangye%}
+                {% include module.html %}
+                {%endfor%}
+            </div>
+            
+            <br>
+        </div>
+    
+    </div>
+</div>
+
 
 <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=f7903u8G9QyG5sV4pACxvZBy3nNenxMg">
 </script>
